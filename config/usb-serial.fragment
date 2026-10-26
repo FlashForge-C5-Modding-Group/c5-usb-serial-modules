@@ -1,0 +1,13 @@
+# Applied on top of the Ingenic X2600 defconfig (see build.sh).
+#
+# FlashForge's kernel exports kmap_high and _totalhigh_pages, so it was
+# built with HIGHMEM; the SDK defconfig has it off.
+CONFIG_HIGHMEM=y
+# Stock vermagic is "5.10.186+ SMP preempt mod_unload MIPS32_R5 32BIT".
+CONFIG_LOCALVERSION="+"
+# CONFIG_LOCALVERSION_AUTO is not set
+CONFIG_USB_SERIAL=m
+CONFIG_USB_SERIAL_GENERIC=y
+CONFIG_USB_SERIAL_SIMPLE=m
+CONFIG_USB_SERIAL_CH341=m
+CONFIG_USB_ACM=m
